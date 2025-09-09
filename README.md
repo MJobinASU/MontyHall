@@ -54,7 +54,7 @@ simulate_n_games(5000, "stay") |> (\(d) mean(d$win))()
   open_goat_door(g, ip)
   
 ```
-
+```md
 | Function | Purpose | Key args | Returns |
 |---|---|---|---|
 | `create_game()` | Random 3-door layout (2 goats, 1 car) | — | `character[3]` |
@@ -63,3 +63,5 @@ simulate_n_games(5000, "stay") |> (\(d) mean(d$win))()
 | `change_door()` | Keep or switch | `stay`, `initial_pick`, `opened_door` | integer (1–3) |
 | `play_game()` | One complete game | `strategy`, `initial_pick` | list (incl. `win`) |
 | `simulate_n_games()` | Many games under one strategy | `n`, `strategy` | data.frame |
+
+```
