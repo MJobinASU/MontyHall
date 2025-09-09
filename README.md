@@ -2,6 +2,7 @@
 # montyhall
 
 <!-- badges: start -->
+[![R-CMD-check](https://github.com/MJobinASU/MontyHall/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/MJobinASU/MontyHall/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 This package provides functions to simulate and analyze the Monty Hall problem, a classic probability puzzle involving hidden prizes behind doors. Users can create games, make initial selections, reveal goat doors, and test outcomes under stay-or-switch strategies. The package also supports running repeated simulations to compare winning probabilities, making it a useful tool for teaching probability concepts, exploring decision-making under uncertainty, and replicating the well-known counterintuitive results of the Monty Hall problem.
