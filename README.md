@@ -37,14 +37,17 @@ simulate_n_games(5000, "stay") |> (\(d) mean(d$win))()
 ## Functions at a glance
 
 
-| Function | Purpose | Key args | Returns |
-|---|---|---|---|
-| `create_game()` | Random 3-door layout (2 goats, 1 car) | — | `character[3]` |
-| `select_door()` | Pick an initial door (random if `NULL`) | `pick` | integer (1–3) |
-| `open_goat_door()` | Host opens a goat, not your pick | `game`, `initial_pick` | integer (1–3) |
-| `change_door()` | Keep or switch | `stay`, `initial_pick`, `opened_door` | integer (1–3) |
-| `play_game()` | One complete game | `strategy`, `initial_pick` | list (incl. `win`) |
-| `simulate_n_games()` | Many games under one strategy | `n`, `strategy` | data.frame |
+| Function                                                        | Purpose                                  | Key args                              | Returns                  |
+| --------------------------------------------------------------- | ---------------------------------------- | ------------------------------------- | ------------------------ |
+| `create_game()`                                                 | Random 3-door layout (2 goats, 1 car)    | —                                     | `character[3]`           |
+| `select_door(pick = NULL)`                                      | Pick an initial door (random if `NULL`)  | `pick`                                | integer (1-3)            |
+| `open_goat_door(game, initial_pick)`                            | Host opens a goat, not the player’s pick | `game`, `initial_pick`                | integer (1-3)            |
+| `change_door(stay, initial_pick, opened_door)`                  | Keep or switch to the other closed door  | `stay`, `initial_pick`, `opened_door` | integer (1-3)            |
+| `determine_winner(game, final_pick)`                            | Check if the final pick is the car       | `game`, `final_pick`                  | logical (`TRUE`/`FALSE`) |
+| `play_game(strategy = c("stay","switch"), initial_pick = NULL)` | Play one complete game                   | `strategy`, `initial_pick`            | list (includes `win`)    |
+| `simulate_n_games(n = 1000, strategy = c("stay","switch"))`     | Run many games under one strategy        | `n`, `strategy`                       | `data.frame`             |
+| `play_n_games(n = 1000, strategy = c("stay","switch"))`         | Wrapper for `simulate_n_games()`         | `n`, `strategy`                       | `data.frame`             |
+
 
 
 - `create_game()` → Build a random 3-door layout (two `"goat"`, one `"car"`).  
