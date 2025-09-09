@@ -1,6 +1,6 @@
 Package: montyhall
 Title: This package plays the Monty Hall Game with 2 Goats and 1 Car
-Version: 0.2.0
+Version: 0.3.0
 Authors@R: 
     person("Michael", "Jobin", , "first.last@example.com", role = c("aut", "cre"))
 Description: This package provides functions to simulate and analyze the Monty Hall problem, a classic probability puzzle involving hidden prizes behind doors. Users can create games, make initial selections, reveal goat doors, and test outcomes under stay-or-switch strategies. The package also supports running repeated simulations to compare winning probabilities, making it a useful tool for teaching probability concepts, exploring decision-making under uncertainty, and replicating the well-known counterintuitive results of the Monty Hall problem.
