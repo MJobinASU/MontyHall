@@ -36,6 +36,17 @@ simulate_n_games(5000, "stay") |> (\(d) mean(d$win))()
 
 ## Functions at a glance
 
+
+| Function | Purpose | Key args | Returns |
+|---|---|---|---|
+| `create_game()` | Random 3-door layout (2 goats, 1 car) | — | `character[3]` |
+| `select_door()` | Pick an initial door (random if `NULL`) | `pick` | integer (1–3) |
+| `open_goat_door()` | Host opens a goat, not your pick | `game`, `initial_pick` | integer (1–3) |
+| `change_door()` | Keep or switch | `stay`, `initial_pick`, `opened_door` | integer (1–3) |
+| `play_game()` | One complete game | `strategy`, `initial_pick` | list (incl. `win`) |
+| `simulate_n_games()` | Many games under one strategy | `n`, `strategy` | data.frame |
+
+
 - `create_game()` → Build a random 3-door layout (two `"goat"`, one `"car"`).  
   **Returns:** `character[3]`  
   **Example:** `create_game()`
@@ -54,13 +65,4 @@ simulate_n_games(5000, "stay") |> (\(d) mean(d$win))()
   open_goat_door(g, ip)
   
 ```
-
-| Function | Purpose | Key args | Returns |
-|---|---|---|---|
-| `create_game()` | Random 3-door layout (2 goats, 1 car) | — | `character[3]` |
-| `select_door()` | Pick an initial door (random if `NULL`) | `pick` | integer (1–3) |
-| `open_goat_door()` | Host opens a goat, not your pick | `game`, `initial_pick` | integer (1–3) |
-| `change_door()` | Keep or switch | `stay`, `initial_pick`, `opened_door` | integer (1–3) |
-| `play_game()` | One complete game | `strategy`, `initial_pick` | list (incl. `win`) |
-| `simulate_n_games()` | Many games under one strategy | `n`, `strategy` | data.frame |
 
