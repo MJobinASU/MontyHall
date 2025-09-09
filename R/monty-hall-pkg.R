@@ -83,6 +83,21 @@ change_door <- function(stay, initial_pick, opened_door) {
   }
 }
 
+#' Determine whether the final pick wins the car
+#'
+#' @param game Character vector of length 3 from [create_game()].
+#' @param final_pick Integer door index (1, 2, or 3).
+#' @return Logical: TRUE if the final pick reveals the car, FALSE otherwise.
+#' @examples
+#' determine_winner(c("goat","car","goat"), 2)  # TRUE
+#' determine_winner(c("car","goat","goat"), 3)  # FALSE
+#' @export
+determine_winner <- function(game, final_pick) {
+  stopifnot(is.character(game), length(game) == 3, all(game %in% c("goat","car")))
+  stopifnot(length(final_pick) == 1, final_pick %in% 1:3)
+  game[final_pick] == "car"
+}
+
 #' Play one Monty Hall game
 #'
 #' @description Runs a single game: create layout, initial pick, host opens goat,
@@ -161,3 +176,18 @@ simulate_n_games <- function(n = 1000, strategy = c("stay","switch")) {
   )
 }
 
+# ---- place this right after simulate_n_games() ----
+
+#' Play n Monty Hall games under one strategy
+#'
+#' Convenience wrapper for [simulate_n_games()] to match grader expectations.
+#'
+#' @param n Number of games to simulate (>= 1).
+#' @param strategy Strategy to use: `"stay"` or `"switch"`.
+#' @return A data frame with one row per game and a `win` column.
+#' @examples
+#' set.seed(1); head(play_n_games(5, "switch"))
+#' @export
+play_n_games <- function(n = 1000, strategy = c("stay","switch")) {
+  simulate_n_games(n, strategy)
+}

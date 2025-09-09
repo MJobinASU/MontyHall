@@ -2,7 +2,9 @@
 
 export(change_door)
 export(create_game)
+export(determine_winner)
 export(open_goat_door)
 export(play_game)
+export(play_n_games)
 export(select_door)
 export(simulate_n_games)
