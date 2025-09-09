@@ -1,3 +1,6 @@
+[![R-CMD-check](https://github.com/MJobinASU/montyhall/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/MJobinASU/montyhall/actions/workflows/R-CMD-check.yaml)
+[![Codecov](https://codecov.io/gh/MJobinASU/montyhall/branch/main/graph/badge.svg)](https://codecov.io/gh/MJobinASU/montyhall)
+
 
 # montyhall
 
