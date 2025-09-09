@@ -1,4 +1,4 @@
-# montyhall
+# Monty Hall
 
 <!-- badges: start -->
 [![R-CMD-check](https://github.com/MJobinASU/montyhall/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/MJobinASU/montyhall/actions/workflows/R-CMD-check.yaml)
