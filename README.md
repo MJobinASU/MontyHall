@@ -1,7 +1,7 @@
 # montyhall
 
 <!-- badges: start -->
-[![R-CMD-check](https://github.com/MJobinASU/MontyHall/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/MJobinASU/MontyHall/actions/workflows/R-CMD-check.yaml)
+[![R-CMD-check](https://github.com/MJobinASU/montyhall/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/MJobinASU/montyhall/actions/workflows/R-CMD-check.yaml)
 
 <!-- badges: end -->
 
@@ -13,11 +13,11 @@ This package provides functions to simulate and analyze the Monty Hall problem, 
 ```r
 # Option A: pak (fast)
 # install.packages("pak")
-pak::pak("MJobinASU/MontyHall")
+pak::pak("MJobinASU/montyhall")
 
 # Option B: devtools
 # install.packages("devtools")
-devtools::install_github("MJobinASU/MontyHall")
+devtools::install_github("MJobinASU/montyhall")
 
 ```
 
