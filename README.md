@@ -2,7 +2,7 @@
 
 <!-- badges: start -->
 [![R-CMD-check](https://github.com/MJobinASU/MontyHall/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/MJobinASU/MontyHall/actions/workflows/R-CMD-check.yaml)
-[![Codecov](https://codecov.io/gh/MJobinASU/MontyHall/branch/main/graph/badge.svg)](https://codecov.io/gh/MJobinASU/MontyHall)
+
 <!-- badges: end -->
 
 
