@@ -64,5 +64,5 @@ simulate_n_games(5000, "stay") |> (\(d) mean(d$win))()
   g <- create_game(); ip <- select_door()
   open_goat_door(g, ip)
   
-```
+  ```
 
