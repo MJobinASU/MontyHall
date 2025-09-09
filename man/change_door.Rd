@@ -14,8 +14,15 @@ change_door(stay, initial_pick, opened_door)
 \item{opened_door}{Integer door index (1, 2, or 3) opened by the host.}
 }
 \value{
-Integer final door index chosen by the player.
+Integer final door index (1, 2, or 3).
 }
 \description{
 Change (or keep) the player's door
+}
+\examples{
+# Deterministic example (no randomness):
+# game layout: goat, car, goat; player picked door 2; host opened door 1 (goat)
+ip <- 2; od <- 1
+change_door(stay = TRUE,  initial_pick = ip, opened_door = od)   # 2 (stay)
+change_door(stay = FALSE, initial_pick = ip, opened_door = od)   # 3 (switch)
 }

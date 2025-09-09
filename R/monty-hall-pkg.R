@@ -62,8 +62,14 @@ open_goat_door <- function(game, initial_pick) {
 #'
 #' @param stay Logical. If TRUE, keep the initial pick; if FALSE, switch.
 #' @param initial_pick Integer door index (1, 2, or 3).
-#' @param opened_door  Integer door index (1, 2, or 3) opened by the host.
-#' @return Integer final door index chosen by the player.
+#' @param opened_door Integer door index (1, 2, or 3) opened by the host.
+#' @return Integer final door index (1, 2, or 3).
+#' @examples
+#' # Deterministic example (no randomness):
+#' # game layout: goat, car, goat; player picked door 2; host opened door 1 (goat)
+#' ip <- 2; od <- 1
+#' change_door(stay = TRUE,  initial_pick = ip, opened_door = od)   # 2 (stay)
+#' change_door(stay = FALSE, initial_pick = ip, opened_door = od)   # 3 (switch)
 #' @export
 change_door <- function(stay, initial_pick, opened_door) {
   stopifnot(is.logical(stay), length(stay) == 1)
